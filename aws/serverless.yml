@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: ${env:AWS_SERVICE_NAME}
+service: aws-linpack
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -26,10 +26,10 @@ provider:
   region: eu-west-1
   timeout: 240
 
-  environment:
-    INFLUX_ENDPOINT: ${env:INFLUX_ENDPOINT}
-    INFLUX_USER:     ${env:INFLUX_USER}
-    INFLUX_PASSWORD: ${env:INFLUX_PASSWORD}
+#  environment:
+#    INFLUX_ENDPOINT: ${env:INFLUX_ENDPOINT}
+#    INFLUX_USER:     ${env:INFLUX_USER}
+#    INFLUX_PASSWORD: ${env:INFLUX_PASSWORD}
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -61,15 +61,15 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello-128:
-    handler: handler.hello128
-    memorySize: 128
-    environment:
-      MEMORY: 128
-    events:
-      - http:
-          path: hello-128
-          method: get
+#  hello-128:
+#    handler: handler.hello128
+#    memorySize: 128
+#    environment:
+#      MEMORY: 128
+#    events:
+#      - http:
+#          path: hello-128
+#          method: get
   hello-256:
     handler: handler.hello
     memorySize: 256
@@ -79,33 +79,33 @@ functions:
       - http:
           path: hello-256
           method: get
-  hello-512:
-    handler: handler.hello
-    memorySize: 512
-    environment:
-      MEMORY: 512
-    events:
-      - http:
-          path: hello-512
-          method: get
-  hello-1024:
-    handler: handler.hello
-    memorySize: 1024
-    environment:
-      MEMORY: 1024
-    events:
-      - http:
-          path: hello-1024
-          method: get
-  hello-1536:
-    handler: handler.hello
-    memorySize: 1536
-    environment:
-      MEMORY: 1536
-    events:
-      - http:
-          path: hello-1536
-          method: get
+#  hello-512:
+#    handler: handler.hello
+#    memorySize: 512
+#    environment:
+#      MEMORY: 512
+#    events:
+#      - http:
+#          path: hello-512
+#          method: get
+#  hello-1024:
+#    handler: handler.hello
+#    memorySize: 1024
+#    environment:
+#      MEMORY: 1024
+#    events:
+#      - http:
+#          path: hello-1024
+#          method: get
+#  hello-1536:
+#    handler: handler.hello
+#    memorySize: 1536
+#    environment:
+#      MEMORY: 1536
+#    events:
+#      - http:
+#          path: hello-1536
+#          method: get
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
 #      - sns: greeter-topic
