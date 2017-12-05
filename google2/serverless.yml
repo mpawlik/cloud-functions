@@ -3,9 +3,9 @@ service: cloud-functions-research
 provider:
   name: google
   runtime: nodejs
-  project: cloud-functions-2-168708
+  project: functions-188119
   # the path to the credentials file needs to be absolute
-  credentials: keyfile.json
+  credentials: ~/.gcloud/key.json
   timeout: 240s
 
 plugins:
@@ -21,32 +21,32 @@ package:
     - .git/**
 
 functions:
-  hello_128:
-    handler: hello_128
-    memorySize: 128
-    events:
-      - http: path
+#  hello_128:
+#    handler: hello_128
+#    memorySize: 128
+#    events:
+#      - http: path
   hello_256:
     handler: hello_256
     memorySize: 256
     events:
       - http: path
-  hello_512:
-    handler: hello_512
-    memorySize: 512
-    events:
-      - http: path
-  hello_1024:
-    handler: hello_1024
-    memorySize: 1024
-    events:
-      - http: path
-  hello_2048:
-    handler: hello_2048
-    memorySize: 2048
-    events:
-      - http: path
-
+#  hello_512:
+#    handler: hello_512
+#    memorySize: 512
+#    events:
+#      - http: path
+#  hello_1024:
+#    handler: hello_1024
+#    memorySize: 1024
+#    events:
+#      - http: path
+#  hello_2048:
+#    handler: hello_2048
+#    memorySize: 2048
+#    events:
+#      - http: path
+#
   # NOTE: the following uses an "event" event (pubSub event in this case).
   # Please create the corresponding resources in the Google Cloud
   # before deploying this service through Serverless
