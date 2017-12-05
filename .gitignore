@@ -40,3 +40,6 @@ jspm_packages
 .serverless
 google/keyfile.json
 */bin/hello
+
+
+.idea/
