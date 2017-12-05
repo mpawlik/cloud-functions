@@ -1,5 +1,4 @@
 const exec = require('child_process').exec;
-const request = require('request');
 
 // process.env['PATH'] = process.env['PATH'] + ':' + process.env['LAMBDA_TASK_ROOT'] + "/bin";
 
