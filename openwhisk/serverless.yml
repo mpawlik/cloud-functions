@@ -24,28 +24,28 @@ provider:
 # you can add packaging information here
 package:
  include:
-   - bin/hello
+   - bin/xlinpack_xeon64
 #    - include-me-dir/**
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
 
 functions:
-  hello-128:
-    handler: handler.hello
-    memory: 128
-    events:
-      - http: GET hello-128
+#  hello-128:
+#    handler: handler.hello
+#    memory: 128
+#    events:
+#      - http: GET hello-128
   hello-256:
     handler: handler.hello
     memory: 256
     events:
       - http: GET hello-256
-  hello-512:
-    handler: handler.hello
-    memory: 512
-    events:
-      - http: GET hello-512
+#  hello-512:
+#    handler: handler.hello
+#    memory: 512
+#    events:
+#      - http: GET hello-512
 
 #    Functions can be defined using sequences rather than referring
 #    to a handler.
