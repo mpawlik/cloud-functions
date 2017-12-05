@@ -74,7 +74,7 @@ functions:
     handler: handler.hello
     memorySize: 256
     environment:
-      MEMORY: 256
+      MEMORY: "256"
     events:
       - http:
           path: hello-256
