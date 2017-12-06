@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: cloud-functions-research
+service: cloud-functions-research-neimtEvto
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -27,7 +27,10 @@ plugins:
 # you can add packaging information here
 package:
  include:
-   - hello.exe
+   - linpack_xeon64.exe
+   - libiomp5md.dll
+   - libiompstubs5md.dll
+   - lininput.txt
 #    - include-me-dir/**
 #  exclude:
 #    - exclude-me.js
